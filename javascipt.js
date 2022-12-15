@@ -22,8 +22,4 @@ function createGrid() {
         }
         container.appendChild(yCont);
     }
-
-    let p = document.createElement('p');
-    p.textContent = 'Hello there!';
-    container.appendChild(p);
 }
