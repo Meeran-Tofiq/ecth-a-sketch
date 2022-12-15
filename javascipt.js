@@ -16,8 +16,6 @@ function createGrid() {
             xCont.classList.add('x');
             xCont.setAttribute('id', x + 1)
 
-            xCont.textContent = (x + 1);
-
             yCont.appendChild(xCont);
         }
         container.appendChild(yCont);
