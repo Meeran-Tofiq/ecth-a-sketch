@@ -14,10 +14,17 @@ function createGrid() {
             let xCont = document.createElement('div');
 
             xCont.classList.add('x');
-            xCont.setAttribute('id', x + 1)
+            xCont.setAttribute('id', x + 1);
+            addHoverToGrid(xCont);
 
             yCont.appendChild(xCont);
         }
         container.appendChild(yCont);
     }
+}
+
+function addHoverToGrid(_div) {
+    _div.addEventListener('mouseenter', () => {
+        _div.style.backgroundColor = 'black';
+    });
 }
