@@ -49,7 +49,6 @@ function addHoverToGrid(_div) {
 
 function darkenSq(_div) {
     let sqColor = _div.style.backgroundColor;
-    console.log(sqColor);
     sqColor = sqColor.replace('rgb(', '');
     sqColor = sqColor.replace(')', '');
     sqColor = sqColor.split(', ');
