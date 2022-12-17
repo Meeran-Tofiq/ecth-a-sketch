@@ -23,6 +23,7 @@ function createGrid() {
 
             xCont.classList.add('x');
             xCont.setAttribute('id', x + 1);
+            xCont.style.backgroundColor = '#ffffff';
             addHoverToGrid(xCont);
 
             yCont.appendChild(xCont);
@@ -42,6 +43,18 @@ function askUserForSize() {
 
 function addHoverToGrid(_div) {
     _div.addEventListener('mouseenter', () => {
-        _div.style.backgroundColor = 'black';
+        darkenSq(_div);
     });
+}
+
+function darkenSq(_div) {
+    let sqColor = _div.style.backgroundColor;
+    console.log(sqColor);
+    sqColor = sqColor.replace('rgb(', '');
+    sqColor = sqColor.replace(')', '');
+    sqColor = sqColor.split(', ');
+    
+    sqColor[0] = sqColor[0] - 50 > 0 ? sqColor[0]-50 : 0;
+
+    _div.style.backgroundColor = 'rgb(' + sqColor[0] + ',' + sqColor[0] + ',' + sqColor[0] + ')';
 }
