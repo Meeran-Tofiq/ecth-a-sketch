@@ -13,6 +13,12 @@ gridButton.addEventListener('click', () => {
 function createGrid() {
     let size = askUserForSize();
 
+
+    document.getElementById('grid-container').style.gridColumnStart = 1;
+    document.getElementById('grid-container').style.gridRowStart = 1;
+    document.getElementById('grid-container').style.gridColumnEnd = +size+ +1;
+    document.getElementById('grid-container').style.gridRowEnd = +size+ +1;
+
     for(let y = 0; y < size; y++) {
         let yCont = document.createElement('div');
         yCont.classList.add('y');

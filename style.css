@@ -1,27 +1,29 @@
-#grid-container {
+body {
     display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-    width: auto;
-    max-width: 960px;
     justify-content: center;
     align-items: center;
+}
+
+#grid-container {
+    display: grid;
+    margin: 0;
+    padding: 0;
+    gap: 0px;
+    width: 900px;
+    height: 900px;
 }
 
 .y {
     display: flex;
-    flex: 1 1 auto;
     margin: 0;
     padding: 0;
-    max-width: 960px;
-    justify-content: center;
-    align-items: center;
 }
 
 .x {
-    flex: 1 1 auto;
     border: 2px solid black;
     min-width: 8px;
     min-height: 8px;
+    margin: 0;
+    padding: 0;
+    flex: 1;
 }
